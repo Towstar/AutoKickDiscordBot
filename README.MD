@@ -45,8 +45,8 @@ A Discord bot designed to automatically kick specified users from voice channels
    - Create a `userKickList.txt` file in the project root.
    - Add one Discord user ID per line. Example:
      ```
-     1245850657588514918
-     622837177406980109
+     1234567891011121314
+     1234567891011121313
      ```
 
 5. **Run the Bot**
@@ -61,7 +61,7 @@ A Discord bot designed to automatically kick specified users from voice channels
   - `!toggle`: Toggles the autokick feature on or off (requires "Kick Commander" role).
     - Example: `!toggle` → "Autokick Activated ✅" or "Autokick Deactivated ❌"
   - `!kicklist`: Displays the list of users in `userKickList.txt` with their display names and IDs.
-    - Example: `!kicklist` → "Kick list:\nUser1 (ID: 1245850657588514918)\nUser2 (ID: 622837177406980109)"
+    - Example: `!kicklist` → "Kick list:\nUser1 (ID: 1234567891011121314)\nUser2 (ID: 1234567891011121313)"
 - **Autokick Behavior**: When active, the bot automatically disconnects users from voice channels if their ID is in `userKickList.txt`.
 
 ## Project Structure
