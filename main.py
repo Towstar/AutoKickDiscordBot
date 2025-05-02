@@ -11,13 +11,16 @@ try:
             user_id = user_id.strip()
             if user_id:
                 try:
-                    USER_BAN_LIST.append(user_id)
+                    USER_BAN_LIST.append(int(user_id))
                 except ValueError:
                     print(f"Invalid user ID in userKickList.txt: {user_id}")
 except FileNotFoundError:
     print("userKickList.txt not found. Starting with empty ban list.")
 except Exception as e:
     print(f"Error reading userKickList.txt: {e}")
+
+for u in USER_BAN_LIST:
+    print(u)
 
 active = True
 
