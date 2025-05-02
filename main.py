@@ -4,7 +4,21 @@ import os
 from dotenv import load_dotenv
 
 
-USER_BAN_LIST = [1245850657588514918, 622837177406980109]
+USER_BAN_LIST = []
+try:
+    with open('userKickList.txt') as list_file:
+        for user_id in list_file:
+            user_id = user_id.strip()
+            if user_id:
+                try:
+                    USER_BAN_LIST.append(user_id)
+                except ValueError:
+                    print(f"Invalid user ID in userKickList.txt: {user_id}")
+except FileNotFoundError:
+    print("userKickList.txt not found. Starting with empty ban list.")
+except Exception as e:
+    print(f"Error reading userKickList.txt: {e}")
+
 active = True
 
 load_dotenv()
