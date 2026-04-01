@@ -82,4 +82,4 @@ discord-autokick-bot/
 - **Command errors**: Confirm the "Kick Commander" role exists and is assigned to authorized users.
 - **File errors**: Check that `userKickList.txt` is in the project root and contains valid user IDs (one per line).
 
-This README was generated using AI
+This README was generated using AI. Made for Steven
